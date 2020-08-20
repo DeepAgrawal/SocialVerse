@@ -1,0 +1,44 @@
+.landing {
+  height: 88vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: $bg1;
+  display: flex;
+
+  .left {
+    flex: 1;
+    align-self: center;
+    color: $text1;
+    font-size: 3rem;
+    font-weight: 100;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .right {
+    flex: 1;
+    align-self: center;
+    font-size: 1.5rem;
+    color: $text2;
+    line-height: 3rem;
+    .upper-content {
+      color: $text1;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      line-height: 2rem;
+    }
+    button {
+      margin-top: 20px;
+      margin-right: 20px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: $text1;
+      padding: 10px 40px;
+      background-color: $bg1;
+      border: 2px solid $text1;
+      transition: 0.3s all;
+      &:hover {
+        color: $bg1;
+        background-color: $text1;
+      }
+    }
+  }
+}

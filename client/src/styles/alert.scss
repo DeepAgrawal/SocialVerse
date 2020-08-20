@@ -1,0 +1,14 @@
+.alert {
+  pointer-events: none;
+  background-color: $brownbg;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  transition: 0.4 all;
+  font-weight: 600;
+}
+
+.alert-danger {
+  color: red;
+  border: 1px solid red;
+}
