@@ -1,0 +1,59 @@
+.dashboard {
+  h2 {
+    font-size: 2.2rem;
+    color: $bluetext;
+  }
+  h4 {
+    color: $bluetext;
+  }
+  p {
+    margin: 0;
+    font-size: 1.5rem;
+    color: $bluetext;
+  }
+  button {
+    height: 40px;
+    border: 2px solid $browntext;
+    background-color: $browntext;
+    color: white;
+    padding: 0 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: 0.3s all;
+    &:hover {
+      background-color: $brownbg;
+      color: $browntext;
+    }
+  }
+  .dash-btn {
+    margin-right: 20px;
+  }
+  table {
+    font-size: 1.2rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: center;
+    thead {
+      th {
+        height: 40px;
+        background-color: $browntext;
+        color: white;
+        padding: 0 50px;
+      }
+    }
+    tbody {
+      font-size: 1rem;
+      td {
+        padding: 5px 0px;
+        button {
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+  .delete-acc {
+    button {
+      margin: 20px 0;
+    }
+  }
+}

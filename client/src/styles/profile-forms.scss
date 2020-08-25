@@ -1,0 +1,98 @@
+.create-form,
+.add-edu,
+.add-exp {
+  h2 {
+    font-size: 2.2rem;
+    color: $bluetext;
+  }
+  h3 {
+    color: $bluetext;
+    i {
+    }
+  }
+  form {
+    .form-group {
+      margin-bottom: 10px;
+      select {
+        height: 40px;
+        width: 100%;
+        border: 2px solid $browntext;
+        padding: 0 20px;
+        font-size: 1.2rem;
+      }
+      small {
+        color: $bluetext;
+      }
+      input:not(.checkbox) {
+        height: 40px;
+        width: 100%;
+        border: 2px solid $browntext;
+        padding: 0 20px;
+        font-size: 1.2rem;
+      }
+      textarea {
+        height: 80px;
+        width: 100%;
+        border: 2px solid $browntext;
+        padding: 0 20px;
+        font-size: 1.2rem;
+      }
+      h4 {
+        margin: 0;
+        color: $bluetext;
+      }
+      .checkbox-grp {
+        display: flex;
+        align-items: center;
+        .checkbox {
+          height: 20px;
+          width: 20px;
+          border: 2px solid $browntext;
+          padding: 0 20px;
+          margin-right: 10px;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .social-input {
+      display: flex;
+      align-items: center;
+      i {
+        width: 10%;
+        text-align: center;
+        color: $browntext;
+      }
+    }
+    .add-social-btn {
+      height: 40px;
+      margin-bottom: 10px;
+      border: 2px solid $browntext;
+      background-color: $browntext;
+      color: white;
+      padding: 0 20px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: 0.3s all;
+      &:hover {
+        background-color: $brownbg;
+        color: $browntext;
+      }
+    }
+    .btn {
+      height: 40px;
+      border: 2px solid $browntext;
+      background-color: $browntext;
+      color: white;
+      padding: 0 20px;
+      margin-right: 10px;
+      margin-bottom: 50px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: 0.3s all;
+      &:hover {
+        background-color: $brownbg;
+        color: $browntext;
+      }
+    }
+  }
+}

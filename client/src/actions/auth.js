@@ -9,6 +9,7 @@ import {
   LOGIN_SUCCESS,
   LOGIN_FAIL,
   LOGOUT,
+  CLEAR_PROFILE,
 } from './types';
 
 // LOAD USER
@@ -17,7 +18,13 @@ export const loadUser = () => async (dispatch) => {
     setAuthToken(localStorage.token);
   }
   try {
-    const res = await axios.get('http://localhost:5000/api/auth');
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+        'x-auth-token': localStorage.token,
+      },
+    };
+    const res = await axios.get('http://localhost:5000/api/auth', config);
     dispatch({
       type: USER_LOADED,
       payload: res.data,
@@ -36,6 +43,7 @@ export const register = ({ name, email, college, password }) => async (
   const config = {
     headers: {
       'Content-Type': 'application/json',
+      'x-auth-token': localStorage.token,
     },
   };
   const body = JSON.stringify({ name, email, college, password });
@@ -50,7 +58,7 @@ export const register = ({ name, email, college, password }) => async (
       payload: res.data,
     });
   } catch (err) {
-    const errors = err.response.data.errors;
+    const errors = err.response.data.error;
     if (errors) {
       errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
     }
@@ -78,8 +86,9 @@ export const login = (email, password) => async (dispatch) => {
       type: LOGIN_SUCCESS,
       payload: res.data,
     });
+    dispatch(loadUser());
   } catch (err) {
-    const errors = err.response.data.errors;
+    const errors = err.response.data.error;
     if (errors) {
       errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
     }
@@ -91,5 +100,6 @@ export const login = (email, password) => async (dispatch) => {
 
 // LOGOUT / Clear profile
 export const logout = () => (dispatch) => {
+  dispatch({ type: CLEAR_PROFILE });
   dispatch({ type: LOGOUT });
 };

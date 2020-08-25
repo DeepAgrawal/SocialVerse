@@ -1,5 +1,16 @@
 const mongoose = require('mongoose');
 
+// user
+// headline
+// about
+// education
+// experiance
+// location
+// website
+// skills
+// githubusername
+// social
+
 const ProfileSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
@@ -22,6 +33,10 @@ const ProfileSchema = new mongoose.Schema({
         type: String,
         required: true,
       },
+      fieldofstudy: {
+        type: String,
+        required: true,
+      },
       from: {
         type: Date,
         required: true,
@@ -38,7 +53,7 @@ const ProfileSchema = new mongoose.Schema({
       },
     },
   ],
-  experiance: [
+  experience: [
     {
       title: {
         type: String,
