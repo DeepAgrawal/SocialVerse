@@ -8,6 +8,9 @@
 @import './styles/alert.scss';
 @import './styles/dashboard.scss';
 @import './styles/profile-forms.scss';
+@import './styles/posts.scss';
+@import './styles/post.scss';
+@import './styles/profile.scss';
 
 ::-moz-selection {
   background: $text1;
@@ -20,6 +23,11 @@
 
 * {
   box-sizing: border-box;
+}
+
+button,
+a:focus {
+  outline: none;
 }
 
 body,

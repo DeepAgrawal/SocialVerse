@@ -35,7 +35,10 @@ const Dashboard = ({
             <Education education={profile.education} />
             <div className='delete-acc'>
               <button onClick={() => deleteAccount()}>
-                <i className='fas fa-user-minus'></i>
+                <i
+                  style={{ marginRight: '10px' }}
+                  className='fas fa-user-minus'
+                ></i>
                 Delete User
               </button>
             </div>

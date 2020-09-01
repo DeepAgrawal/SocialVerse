@@ -7,13 +7,10 @@ const CommentForm = ({ postId, addComment }) => {
   const [text, setText] = useState('');
 
   return (
-    <div className='post-form'>
-      <div className='bg-primary p'>
-        <h3>Leave a Comment</h3>
-      </div>
+    <div className='comment-form'>
+      <h3>Leave a Comment</h3>
       <form
-        className='form my-1'
-        onSubmit={e => {
+        onSubmit={(e) => {
           e.preventDefault();
           addComment(postId, { text });
           setText('');
@@ -23,22 +20,21 @@ const CommentForm = ({ postId, addComment }) => {
           name='text'
           cols='30'
           rows='5'
-          placeholder='Comment the post'
+          placeholder='Comment on the post'
           value={text}
-          onChange={e => setText(e.target.value)}
+          onChange={(e) => setText(e.target.value)}
           required
         />
-        <input type='submit' className='btn btn-dark my-1' value='Submit' />
+        <button type='submit' className='comment-btn' value='Submit'>
+          Post Comment
+        </button>
       </form>
     </div>
   );
 };
 
 CommentForm.propTypes = {
-  addComment: PropTypes.func.isRequired
+  addComment: PropTypes.func.isRequired,
 };
 
-export default connect(
-  null,
-  { addComment }
-)(CommentForm);
+export default connect(null, { addComment })(CommentForm);

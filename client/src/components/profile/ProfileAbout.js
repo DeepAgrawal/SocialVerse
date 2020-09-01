@@ -1,25 +1,14 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-const ProfileAbout = ({
-  profile: {
-    bio,
-    skills,
-    user: { name }
-  }
-}) => (
-  <div className='profile-about bg-light p-2'>
-    {bio && (
-      <Fragment>
-        <h2 className='text-primary'>{name.trim().split(' ')[0]}s Bio</h2>
-        <p>{bio}</p>
-        <div className='line' />
-      </Fragment>
-    )}
-    <h2 className='text-primary'>Skill Set</h2>
+const ProfileAbout = ({ profile: { headline, about, skills } }) => (
+  <div className='profile-about'>
+    <h2>{headline}</h2>
+    {about && <p>{about}</p>}
+    <h2>Skills</h2>
     <div className='skills'>
       {skills.map((skill, index) => (
-        <div key={index} className='p-1'>
+        <div key={index} className='skill'>
           <i className='fas fa-check' /> {skill}
         </div>
       ))}
@@ -28,7 +17,7 @@ const ProfileAbout = ({
 );
 
 ProfileAbout.propTypes = {
-  profile: PropTypes.object.isRequired
+  profile: PropTypes.object.isRequired,
 };
 
 export default ProfileAbout;

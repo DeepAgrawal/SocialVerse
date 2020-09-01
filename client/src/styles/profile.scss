@@ -1,0 +1,59 @@
+.profile {
+  h2 {
+    color: $browntext;
+    margin-bottom: 10px;
+  }
+  h3 {
+    margin: 10px 0;
+  }
+  p {
+    margin: 0;
+  }
+  .profile-top {
+    .name {
+      text-align: center;
+      color: $bluetext;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    .subline {
+      text-align: center;
+      color: $bluetext;
+    }
+    .socials {
+      text-align: center;
+      padding: 20px 0;
+      a {
+        text-decoration: none;
+        color: $browntext;
+        margin: 0 10px;
+        &:hover {
+          color: $bluetext;
+        }
+      }
+    }
+  }
+  .profile-about {
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      .skill {
+        margin: 5px 0;
+      }
+    }
+  }
+  .profile-exp,
+  .profile-edu {
+    border-left: 2px solid $bluetext;
+    padding-left: 10px;
+    h3 {
+      color: $bluetext;
+    }
+    strong {
+      color: $bluetext;
+    }
+    p {
+      margin: 5px 0;
+    }
+  }
+}

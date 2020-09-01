@@ -1,0 +1,115 @@
+.post {
+  padding: 20px 0;
+  .back-btn {
+    height: 40px;
+    border: none;
+    background-color: $brownbg;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    a {
+      text-decoration: none;
+      color: $browntext;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+  .single-post {
+    background-color: $brownbg;
+    border-bottom: 2px solid $browntext;
+    position: relative;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    .name {
+      a {
+        color: $bluetext;
+        text-decoration: none;
+        display: inline-block;
+        h4 {
+          font-size: 1.2rem;
+          margin: 20px 0;
+        }
+      }
+    }
+    .text {
+      margin: 0;
+    }
+    .date {
+      p {
+        font-size: 0.8rem;
+        color: $bluetext;
+      }
+    }
+  }
+  .comment-form {
+    h3 {
+      color: white;
+      margin: 0;
+      padding: 5px 10px;
+      background-color: $browntext;
+    }
+    textarea {
+      height: 80px;
+      width: 100%;
+      border: 2px solid $browntext;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      resize: vertical;
+    }
+    button {
+      height: 40px;
+      border: 2px solid $browntext;
+      background-color: $browntext;
+      color: white;
+      padding: 0 20px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: 0.3s all;
+      &:hover {
+        background-color: transparent;
+        color: $browntext;
+      }
+    }
+  }
+  hr {
+    background-color: $browntext;
+    border: 1px dotted $browntext;
+    margin: 20px 0;
+  }
+  .single-comment {
+    background-color: $brownbg;
+    border-bottom: 2px solid $browntext;
+    position: relative;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    .name {
+      a {
+        color: $bluetext;
+        text-decoration: none;
+        display: inline-block;
+        h4 {
+          font-size: 1.2rem;
+          margin: 20px 0;
+        }
+      }
+    }
+    .text {
+      margin: 0;
+    }
+    .date {
+      p {
+        font-size: 0.8rem;
+        color: $bluetext;
+      }
+    }
+    .delete-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: $bluetext;
+    }
+  }
+}
