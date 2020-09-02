@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.scss';
 
 import Navbar from './components/layout/Navbar';
+import Appbar from './components/layout/Appbar';
 import Landing from './components/layout/Landing';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
@@ -35,6 +36,7 @@ const App = () => {
       <Router>
         <React.Fragment>
           <Navbar />
+          <Appbar />
           <Route exact path='/' component={Landing} />
           <section className='container'>
             <Alert />

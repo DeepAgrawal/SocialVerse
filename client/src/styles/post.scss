@@ -68,11 +68,16 @@
         background-color: transparent;
         color: $browntext;
       }
+      @include media('<=tablet') {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+      }
     }
   }
   hr {
-    background-color: $browntext;
-    border: 1px dotted $browntext;
+    background-color: $accent;
+    border: 1px solid $accent;
     margin: 20px 0;
   }
   .single-comment {

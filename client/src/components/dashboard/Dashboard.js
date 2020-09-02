@@ -34,13 +34,7 @@ const Dashboard = ({
             <Experience experience={profile.experience} />
             <Education education={profile.education} />
             <div className='delete-acc'>
-              <button onClick={() => deleteAccount()}>
-                <i
-                  style={{ marginRight: '10px' }}
-                  className='fas fa-user-minus'
-                ></i>
-                Delete User
-              </button>
+              <button onClick={() => deleteAccount()}>Delete User</button>
             </div>
           </React.Fragment>
         ) : (

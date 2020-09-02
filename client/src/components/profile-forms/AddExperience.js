@@ -109,7 +109,7 @@ const AddExperience = ({ addExperience, history }) => {
             onChange={onChange}
           />
         </div>
-        <button type='submit' className='btn btn-primary my-1'>
+        <button type='submit' className='btn submit-btn'>
           Submit
         </button>
         <Link to='/dashboard'>

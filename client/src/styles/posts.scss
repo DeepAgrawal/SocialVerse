@@ -37,12 +37,21 @@
         background-color: transparent;
         color: $browntext;
       }
+      @include media('<=tablet') {
+        margin-bottom: 20px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+      }
     }
   }
   .all-posts {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
+    @include media('<=tablet') {
+      grid-template-columns: repeat(1, 1fr);
+    }
     .single-post {
       background-color: $brownbg;
       border-bottom: 2px solid $browntext;
@@ -95,6 +104,12 @@
           &:hover {
             background-color: $accent;
           }
+        }
+        .like-btn {
+          color: $green;
+        }
+        .dislike-btn {
+          color: $red;
         }
       }
       .date {

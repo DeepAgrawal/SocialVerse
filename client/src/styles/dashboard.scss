@@ -1,23 +1,32 @@
 .dashboard {
+  position: relative;
   h2 {
     font-size: 2.2rem;
     color: $bluetext;
+    @include media('<=tablet') {
+      font-size: 1.8rem;
+    }
   }
   h4 {
     color: $bluetext;
+    @include media('<=tablet') {
+      font-size: 1rem;
+    }
   }
   p {
     margin: 0;
     font-size: 1.5rem;
     color: $bluetext;
   }
-  button {
+  .dash-btn,
+  .edu-btn,
+  .exp-btn {
     height: 40px;
     border: 2px solid $browntext;
     background-color: $browntext;
     color: white;
     padding: 0 20px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     transition: 0.3s all;
     &:hover {
@@ -27,12 +36,22 @@
   }
   .dash-btn {
     margin-right: 20px;
+    @include media('<=tablet') {
+      width: 70%;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
+      margin: 5px 0;
+    }
   }
   table {
     font-size: 1.2rem;
     border-collapse: collapse;
     border-spacing: 0;
     text-align: center;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
     thead {
       th {
         height: 40px;
@@ -53,7 +72,24 @@
   }
   .delete-acc {
     button {
+      height: 40px;
+      border: 2px solid $red;
+      background-color: $red;
+      color: white;
+      padding: 0 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: 0.3s all;
+      &:hover {
+        background-color: transparent;
+        color: $red;
+      }
       margin: 20px 0;
+      @include media('<=tablet') {
+        width: 100%;
+        text-align: center;
+        width: 100%;
+      }
     }
   }
 }

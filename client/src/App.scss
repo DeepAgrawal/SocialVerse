@@ -3,6 +3,7 @@
 @import './styles/varibles.scss';
 @import './styles/breakpoints.scss';
 @import './styles/navbar.scss';
+@import './styles/appbar.scss';
 @import './styles/landing.scss';
 @import './styles/register.scss';
 @import './styles/alert.scss';
@@ -13,12 +14,12 @@
 @import './styles/profile.scss';
 
 ::-moz-selection {
-  background: $text1;
-  color: $bg1;
+  background: $browntext;
+  color: $brownbg;
 }
 ::selection {
-  background: $text1;
-  color: $bg1;
+  background: $browntext;
+  color: $brownbg;
 }
 
 * {
@@ -39,6 +40,9 @@ html {
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @include media('<=tablet') {
+    margin-bottom: 3.5vh;
+  }
 }
 
 .container {

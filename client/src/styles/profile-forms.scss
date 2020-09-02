@@ -80,18 +80,26 @@
     }
     .btn {
       height: 40px;
-      border: 2px solid $browntext;
-      background-color: $browntext;
+      border: 2px solid $red;
+      background-color: $red;
       color: white;
       padding: 0 20px;
+      margin: 20px 0;
       margin-right: 10px;
-      margin-bottom: 50px;
       font-size: 1.2rem;
       font-weight: 600;
       transition: 0.3s all;
       &:hover {
-        background-color: $brownbg;
-        color: $browntext;
+        background-color: transparent;
+        color: $red;
+      }
+    }
+    .submit-btn {
+      border: 2px solid $green;
+      background-color: $green;
+      &:hover {
+        background-color: transparent;
+        color: $green;
       }
     }
   }

@@ -1,0 +1,26 @@
+.appbar {
+  height: 8vh;
+  width: 100%;
+  background-color: $brownbg;
+  border-top: 2px solid $accent;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  text-align: center;
+  margin: 0px;
+  .nav-links {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    a {
+      text-decoration: none;
+      color: $browntext;
+      font-size: 2rem;
+    }
+  }
+  @include media('>=tablet') {
+    display: none;
+  }
+}

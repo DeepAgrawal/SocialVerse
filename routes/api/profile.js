@@ -8,21 +8,21 @@ const User = require('../../models/User');
 const Profile = require('../../models/Profile');
 const Post = require('../../models/Post');
 
-// // Get current user profile
-// router.get('/me', auth, async (req, res) => {
-//   try {
-//     const profile = await Profile.findOne({
-//       user: req.user.id,
-//     }).populate('user', ['name', 'college']);
-//     if (!profile) {
-//       return res.status(400).json({ msg: 'Profile not found' });
-//     }
-//     res.json(profile);
-//   } catch (error) {
-//     console.error(error.message);
-//     res.status(500).send('💥Server error');
-//   }
-// });
+// Get current user profile
+router.get('/me', auth, async (req, res) => {
+  try {
+    const profile = await Profile.findOne({
+      user: req.user.id,
+    }).populate('user', ['name', 'college']);
+    if (!profile) {
+      return res.status(400).json({ msg: 'Profile not found' });
+    }
+    res.json(profile);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send('💥Server error');
+  }
+});
 
 // Create or Update user profile
 router.post(
