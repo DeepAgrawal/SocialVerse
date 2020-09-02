@@ -1,6 +1,6 @@
 # Socialss
 
-[![N|Solid](https://tech365.ng/images/2020/03/15/react-and-nodejs-training-lagos-nigeria.jpg)](https://nodesource.com/products/nsolid)
+[![MERN](https://tech365.ng/images/2020/03/15/react-and-nodejs-training-lagos-nigeria.jpg)]()
 
 Socialss is a Social Networking Website for students, mobile-ready, powered by React, Node Js, Express and MongoDB.
 
