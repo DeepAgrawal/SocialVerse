@@ -42,7 +42,7 @@ const Dashboard = ({
             <div className='no-profile'>
               <p>You have not setup your profile yet.</p>
               <Link to='create-profile'>
-                <button>Create Profile</button>
+                <button className='dash-btn'>Create Profile</button>
               </Link>
             </div>
           </React.Fragment>
