@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://deep123:deep123@socialss.pnh0j.mongodb.net/Socialss?retryWrites=true&w=majority",
+  "jwtSecret": "socialss"
+}
