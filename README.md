@@ -11,6 +11,9 @@ Install the dependencies and devDependencies and start the server.
 ```sh
 $ cd socialss
 $ npm install
+$ cd client
+$ npm install
+$ cd ..
 $ npm run dev
 ```
 
